@@ -1,0 +1,28 @@
+--Creating a Store Database
+--quantity sold in millions
+
+CREATE TABLE video games (id INTEGER PRIMARY KEY, game TEXT, quantity sold INTEGER price INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES(1, "Apex Legends", 72, 0, 70);
+INSERT INTO store VALUES(2, "Call of Duty", 130, 60, 60);
+INSERT INTO store VALUES(3, "Red Dead Redemption", 55, 60, 95);
+INSERT INTO store VALUES(4, "Minecraft", 300, 20, 83);
+INSERT INTO store VALUES(5, "Roblox", 250, 0, 75);
+INSERT INTO store VALUES(6, "Destiny 2", 15, 60, 65);
+INSERT INTO store VALUES(7, "NBA 2K22", 25, 70, 60);
+INSERT INTO store VALUES(8, "ARK: Survival Evolved", 10, 40, 70);
+INSERT INTO store VALUES(9, "DayZ", 8, 30, 50);
+INSERT INTO store VALUES(10, "Battlefield 2042", 3, 70, 25);
+
+--ordering games by price
+
+SELECT *
+FROM video games
+ORDER BY price;
+
+--Average price of games where popularity is over 50, ordered by popularity
+
+SELECT AVG(price)
+FROM video games
+WHERE popularity > 50
+ORDER BY popularity
